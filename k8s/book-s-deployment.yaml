@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-s-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-s-app
+  template:
+    metadata:
+      labels:
+        app: book-s-app
+    spec:
+      containers:
+      - name: book-s-container
+        image: book-s-flask-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5002
+
