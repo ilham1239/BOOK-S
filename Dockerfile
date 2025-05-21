@@ -11,8 +11,9 @@ RUN pip install flask
 # Copier tout le contenu de ton projet dans /app
 COPY . .
 
-# Exposer le port 5000 (port par défaut de Flask)
-EXPOSE 5000
+# Exposer le port 5002 (port par défaut de Flask)
+EXPOSE 5002
 
 # Lancer l'application Flask (mode debug activé)
-CMD ["python", "ton_script.py"]
+CMD ["python", "app.py"]
+

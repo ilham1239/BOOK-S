@@ -2,7 +2,7 @@ from flask import Flask, request, session, redirect, url_for, render_template_st
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = '1234567890'
 
 def init_db():
     conn = sqlite3.connect('books.db')
@@ -281,4 +281,5 @@ book_template = '''
 '''
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5002)
+
